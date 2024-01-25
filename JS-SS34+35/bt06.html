@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Student Management</h1>
+    <div>
+      Student Id
+      <span>
+        <input type="number" id="inputId" />
+      </span>
+    </div>
+
+    <div>
+      Student name
+      <span>
+        <input type="text" id="inputName" />
+      </span>
+    </div>
+
+    <div>
+      Age
+      <span>
+        <input type="number" id="inputAge" />
+      </span>
+    </div>
+
+    <div>
+      Phone
+      <span>
+        <input type="number" id="inputPhone" />
+      </span>
+    </div>
+
+    <div>
+      Email
+      <span>
+        <input type="text" id="inputEmail" />
+      </span>
+    </div>
+
+    <button type="submit" id="inputBtn">Create</button>
+    <script>
+      var id = document.getElementById("inputId");
+      var name = document.getElementById("inputName");
+      var age = document.getElementById("inputAge");
+      var phone = document.getElementById("inputPhone");
+      var email = document.getElementById("inputEmail");
+      var addBtn = document.getElementById("inputBtn");
+      function validateIdNameAge() {
+        if (id.value < 6 || name.value === "" || age.value < 18) {
+          alert("Không hợp lệ");
+          return false;
+        }
+      }
+      function validatePhone() {
+        const regexPhoneNumber = /(84|0[3|5|7|8|9])+([0-9]{8})\b/g;
+
+        return phone.match(regexPhoneNumber) ? true : false;
+      }
+
+      function validateEmail() {}
+    </script>
+  </body>
+</html>

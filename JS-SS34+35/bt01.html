@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>Your answer</td>
+      </tr>
+      <tr>
+        <input type="text" name="input" id="input" />
+        <button type="submit" onclick="checkAnswer()">Answer</button>
+      </tr>
+    </table>
+    <script>
+      function checkAnswer() {
+        var input = document.getElementById("input").value;
+        if (input.length < 1 || input.length > 10) {
+          alert("Không hợp lệ!!!");
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
